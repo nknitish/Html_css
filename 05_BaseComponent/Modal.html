@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="modal.css" />
+  </head>
+
+  <body>
+    <button id="openModalBtn">Open Modal</button>
+
+    <div class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>Modal Title</h2>
+          <button id="closeModalBtn">x</button>
+        </div>
+
+        <div class="modal-body">
+          <p>This is the modal content.</p>
+        </div>
+      </div>
+    </div>
+    <script>
+      const openModalBtn = document.getElementById("openModalBtn");
+      const closeModalBtn = document.getElementById("closeModalBtn");
+      const modal = document.querySelector(".modal");
+      const modalContent = document.querySelector(".modal-content");
+
+      function openModal() {
+        modal.style.display = "block";
+      }
+
+      function closeModal() {
+        modal.style.display = "none";
+      }
+
+      openModalBtn.addEventListener("click", openModal);
+      closeModalBtn.addEventListener("click", closeModal);
+      modal.addEventListener("click", closeModal);
+
+      modalContent.addEventListener("click", function (event) {
+        event.stopPropagation();
+      });
+    </script>
+  </body>
+</html>

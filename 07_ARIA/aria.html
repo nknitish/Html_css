@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ARIA</title>
+    <link rel="stylesheet" href="aria.css" />
+  </head>
+  <body>
+    <main>
+      <h1>ARIA Example</h1>
+
+      <form aria-labelledby="formHeading">
+        <h2 id="formHeading">Contact Form</h2>
+
+        <label for="nameInput">Enter your name:</label>
+        <input type="text" id="nameInput" name="name" required />
+
+        <label for="emailInput">Enter your email:</label>
+        <input type="email" id="emailInput" name="email" required />
+
+        <button type="submit">Submit</button>
+      </form>
+
+      <img src="example.jpg" alt="Descriptive text for screen readers" />
+
+      <!-- Good use of aria-label: icon-only button -->
+      <button aria-label="Close" onclick="alert('Close button clicked')">
+        X
+      </button>
+
+      <!-- Either a role="alert" OR aria-live region -->
+      <div role="alert">This is an important alert message!</div>
+
+      <!-- Use native <nav> instead of div+role -->
+      <nav aria-labelledby="navHeading">
+        <h2 id="navHeading">Main navigation</h2>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Keyboard Accessible UI Demo</title>
+    <style>
+      /* ===== Base Reset ===== */
+      * {
+        box-sizing: border-box;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          sans-serif;
+      }
+
+      body {
+        margin: 0;
+        background: #f3f4f6;
+        color: #111827;
+      }
+
+      /* ===== Skip Link ===== */
+      .skip-link {
+        position: absolute;
+        top: 8px;
+        left: -999px;
+        padding: 8px 12px;
+        background: #111827;
+        color: #ffffff;
+        text-decoration: none;
+        border-radius: 4px;
+        z-index: 1000;
+      }
+
+      .skip-link:focus-visible {
+        left: 8px;
+      }
+
+      /* ===== Layout ===== */
+      header {
+        background: #111827;
+        color: #ffffff;
+        padding: 12px 16px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      header nav a {
+        color: #e5e7eb;
+        margin-left: 16px;
+        text-decoration: none;
+        font-size: 14px;
+      }
+
+      header nav a:hover {
+        text-decoration: underline;
+      }
+
+      main {
+        max-width: 700px;
+        margin: 24px auto;
+        padding: 0 16px 32px;
+      }
+
+      h1 {
+        margin-bottom: 12px;
+        font-size: 24px;
+      }
+
+      p {
+        margin-bottom: 12px;
+        font-size: 14px;
+        line-height: 1.5;
+      }
+
+      /* ===== Focus Styles ===== */
+      a:focus-visible,
+      button:focus-visible,
+      input:focus-visible {
+        outline: 2px solid #2563eb;
+        outline-offset: 2px;
+      }
+
+      /* ===== Buttons ===== */
+      .btn {
+        padding: 8px 14px;
+        border-radius: 6px;
+        border: none;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: 500;
+        background-color: #2563eb;
+        color: #ffffff;
+        margin-right: 8px;
+        transition: background-color 0.15s ease, transform 0.1s ease;
+      }
+
+      .btn:hover {
+        background-color: #1d4ed8;
+      }
+
+      .btn:active {
+        transform: scale(0.98);
+      }
+
+      .btn-secondary {
+        background-color: #6b7280;
+      }
+
+      .btn-secondary:hover {
+        background-color: #4b5563;
+      }
+
+      /* ===== Simple Form ===== */
+      .demo-form {
+        margin-top: 24px;
+        padding: 16px;
+        background: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 4px 14px rgba(15, 23, 42, 0.08);
+      }
+
+      .field {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        margin-bottom: 12px;
+      }
+
+      .field label {
+        font-size: 14px;
+        font-weight: 500;
+      }
+
+      .field input {
+        padding: 8px 10px;
+        border-radius: 6px;
+        border: 1px solid #d1d5db;
+        font-size: 14px;
+      }
+
+      /* ===== Modal Backdrop & Dialog ===== */
+      .modal-backdrop {
+        position: fixed;
+        inset: 0;
+        background: rgba(15, 23, 42, 0.5);
+        display: none; /* hidden by default */
+        align-items: center;
+        justify-content: center;
+        z-index: 999;
+      }
+
+      .modal-backdrop[aria-hidden="false"] {
+        display: flex;
+      }
+
+      .modal {
+        background: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 16px 40px rgba(15, 23, 42, 0.5);
+        padding: 16px 18px 18px;
+        width: 360px;
+        max-width: 90vw;
+      }
+
+      .modal-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 12px;
+      }
+
+      .modal-header h2 {
+        font-size: 18px;
+        margin: 0;
+      }
+
+      .modal-close {
+        background: none;
+        border: none;
+        font-size: 18px;
+        cursor: pointer;
+        padding: 4px 8px;
+      }
+
+      .modal-body p {
+        font-size: 14px;
+        margin: 0 0 12px;
+      }
+
+      .modal-footer {
+        display: flex;
+        justify-content: flex-end;
+        gap: 8px;
+        margin-top: 8px;
+      }
+
+      .hint {
+        font-size: 13px;
+        color: #6b7280;
+        margin-top: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Skip Navigation -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header>
+      <div>Keyboard Accessible UI Demo</div>
+      <nav>
+        <a href="#main-content">Main</a>
+        <a href="#form-demo">Form</a>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <h1>Keyboard-Accessible Example</h1>
+      <p>Use only your keyboard on this page:</p>
+      <ul>
+        <li><strong>Tab</strong> / <strong>Shift+Tab</strong> to move focus</li>
+        <li>
+          <strong>Enter</strong> or <strong>Space</strong> to activate
+          buttons/links
+        </li>
+        <li><strong>Esc</strong> to close the modal</li>
+      </ul>
+
+      <div style="margin: 16px 0">
+        <button id="openModalBtn" class="btn">Open Modal (Enter/Space)</button>
+        <button class="btn btn-secondary">Another Button</button>
+      </div>
+
+      <p class="hint">
+        Try: Tab → focus "Open Modal" → press Enter → modal opens. Inside modal:
+        Tab moves between Close, Cancel, Confirm. Press Esc to close.
+      </p>
+
+      <section id="form-demo" class="demo-form" aria-labelledby="form-heading">
+        <h2 id="form-heading">Simple Form (Tab & Enter)</h2>
+        <p style="font-size: 13px; color: #6b7280">
+          Tab through the inputs and submit with Enter while focused on the
+          button.
+        </p>
+        <form
+          onsubmit="event.preventDefault(); alert('Form submitted via keyboard!');"
+        >
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" type="text" />
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" type="email" />
+          </div>
+          <button type="submit" class="btn">Submit Form</button>
+        </form>
+      </section>
+    </main>
+
+    <!-- Modal Backdrop + Dialog -->
+    <div class="modal-backdrop" id="modalBackdrop" aria-hidden="true">
+      <div
+        class="modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modal-title"
+      >
+        <div class="modal-header">
+          <h2 id="modal-title">Keyboard Modal</h2>
+          <button
+            id="closeModalBtn"
+            class="modal-close"
+            aria-label="Close dialog"
+          >
+            ×
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>This is a keyboard-accessible modal.</p>
+          <p class="hint">
+            Press <strong>Tab</strong> to move between buttons, or
+            <strong>Esc</strong> to close.
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" id="cancelModalBtn">Cancel</button>
+          <button class="btn" id="confirmModalBtn">Confirm</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const openModalBtn = document.getElementById("openModalBtn");
+      const modalBackdrop = document.getElementById("modalBackdrop");
+      const closeModalBtn = document.getElementById("closeModalBtn");
+      const cancelModalBtn = document.getElementById("cancelModalBtn");
+      const confirmModalBtn = document.getElementById("confirmModalBtn");
+      const modal = modalBackdrop.querySelector(".modal");
+
+      let lastFocusedElement = null;
+
+      function getFocusableElements(container) {
+        return container.querySelectorAll(
+          'a[href], button, textarea, input, select, [tabindex]:not([tabindex="-1"])'
+        );
+      }
+
+      function openModal() {
+        lastFocusedElement = document.activeElement;
+
+        modalBackdrop.setAttribute("aria-hidden", "false");
+
+        const focusables = getFocusableElements(modal);
+        if (focusables.length) {
+          focusables[0].focus();
+        }
+      }
+
+      function closeModal() {
+        modalBackdrop.setAttribute("aria-hidden", "true");
+
+        if (
+          lastFocusedElement &&
+          typeof lastFocusedElement.focus === "function"
+        ) {
+          lastFocusedElement.focus();
+        }
+      }
+
+      // Open modal (Enter/Space on button works automatically)
+      openModalBtn.addEventListener("click", openModal);
+
+      // Close actions
+      closeModalBtn.addEventListener("click", closeModal);
+      cancelModalBtn.addEventListener("click", closeModal);
+
+      confirmModalBtn.addEventListener("click", () => {
+        alert("Confirmed!");
+        closeModal();
+      });
+
+      // Close when clicking backdrop (outside modal)
+      modalBackdrop.addEventListener("click", (event) => {
+        if (event.target === modalBackdrop) {
+          closeModal();
+        }
+      });
+
+      // Global key handling (Esc + focus trap)
+      document.addEventListener("keydown", (event) => {
+        const isModalOpen =
+          modalBackdrop.getAttribute("aria-hidden") === "false";
+
+        // ESC closes modal
+        if (isModalOpen && event.key === "Escape") {
+          event.preventDefault();
+          closeModal();
+          return;
+        }
+
+        // Focus trap (Tab inside modal)
+        if (isModalOpen && event.key === "Tab") {
+          const focusables = Array.from(getFocusableElements(modal));
+          if (!focusables.length) return;
+
+          const currentIndex = focusables.indexOf(document.activeElement);
+          let nextIndex = currentIndex;
+
+          if (event.shiftKey) {
+            // Shift+Tab → backwards
+            nextIndex =
+              currentIndex <= 0 ? focusables.length - 1 : currentIndex - 1;
+          } else {
+            // Tab → forwards
+            nextIndex =
+              currentIndex === focusables.length - 1 ? 0 : currentIndex + 1;
+          }
+
+          event.preventDefault();
+          focusables[nextIndex].focus();
+        }
+      });
+    </script>
+  </body>
+</html>

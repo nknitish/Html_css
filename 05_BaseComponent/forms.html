@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accessible Form Example</title>
+    <link rel="stylesheet" href="forms.css" />
+    <script>
+      function handleSubmit(event) {
+        event.preventDefault();
+        const form = event.target;
+
+        const formData = new FormData(form);
+        console.log(formData);
+        const data = Object.fromEntries(formData.entries());
+        console.log("Form Data Submitted:", data);
+        alert("Form submitted! Check console for data.");
+      }
+    </script>
+  </head>
+  <body>
+    <form onsubmit="handleSubmit(event)">
+      <!-- Name -->
+      <div class="field">
+        <label for="name" class="field__label">Enter your name</label>
+        <input
+          id="name"
+          name="name"
+          type="text"
+          placeholder="Text Input"
+          class="field__input"
+          required
+        />
+      </div>
+
+      <!-- Password -->
+      <div class="field">
+        <label for="password" class="field__label">Enter your password</label>
+        <input
+          id="password"
+          name="password"
+          type="password"
+          placeholder="Password Input"
+          class="field__input"
+          required
+        />
+      </div>
+
+      <!-- Address -->
+      <div class="field">
+        <label for="address" class="field__label">Enter your address</label>
+        <textarea
+          id="address"
+          name="address"
+          rows="5"
+          cols="20"
+          class="field__textarea"
+        ></textarea>
+      </div>
+
+      <!-- Country -->
+      <div class="field">
+        <label for="country" class="field__label">Choose your country</label>
+        <select id="country" name="country" class="field__select">
+          <option value="">-- Select country --</option>
+          <option value="india">India</option>
+          <option value="usa">USA</option>
+          <option value="uk">UK</option>
+        </select>
+      </div>
+
+      <!-- Gender -->
+      <fieldset class="field">
+        <legend class="field__label">Select gender</legend>
+
+        <label for="gender-male" class="field__radio-label">
+          <input
+            id="gender-male"
+            type="radio"
+            name="gender"
+            value="male"
+            class="field__radio"
+          />
+          Male
+        </label>
+
+        <label for="gender-female" class="field__radio-label">
+          <input
+            id="gender-female"
+            type="radio"
+            name="gender"
+            value="female"
+            class="field__radio"
+          />
+          Female
+        </label>
+      </fieldset>
+
+      <!-- Submit -->
+      <button type="submit" class="btn btn--primary">Submit form</button>
+    </form>
+  </body>
+</html>

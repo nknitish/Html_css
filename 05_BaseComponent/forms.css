@@ -1,0 +1,102 @@
+/* Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, sans-serif;
+  background: #f5f5f7;
+  color: #111827;
+}
+
+/* Form container */
+form {
+  max-width: 450px;
+  margin: 40px auto;
+  padding: 24px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 26px rgba(0, 0, 0, 0.06);
+}
+
+/* Field group */
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 18px;
+}
+
+/* Labels */
+.field__label,
+fieldset.field legend.field__label {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Input elements */
+.field__input,
+.field__textarea,
+.field__select {
+  padding: 10px 12px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  background-color: #f9fafb;
+  color: #111827;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.field__textarea {
+  resize: vertical;
+  min-height: 90px;
+}
+
+/* Focus states */
+.field__input:focus-visible,
+.field__textarea:focus-visible,
+.field__select:focus-visible {
+  border-color: #2563eb;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
+  outline: none;
+}
+
+/* Radio group */
+fieldset.field {
+  border: none;
+  padding: 0;
+}
+
+.field__radio-label {
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-right: 12px;
+}
+
+/* Button styling */
+button {
+  font: inherit;
+  background-color: #2563eb;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #1d4ed8;
+}
+
+button:focus-visible {
+  outline: 2px solid #111;
+  outline-offset: 2px;
+}

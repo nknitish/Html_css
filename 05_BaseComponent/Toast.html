@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Toast</title>
+    <link rel="stylesheet" href="toast.css" />
+  </head>
+  <body>
+    <div style="display: flex; gap: 10px; margin-bottom: 20px">
+      <button class="toast-trigger" data-type="success">Success</button>
+      <button class="toast-trigger" data-type="warning">Warning</button>
+      <button class="toast-trigger" data-type="error">Error</button>
+      <button class="toast-trigger" data-type="info">Info</button>
+    </div>
+
+    <div class="toast-container"></div>
+
+    <script>
+      const toastObject = {
+        success: "This is a success toast message!",
+        error: "This is an error toast message!",
+        info: "This is an info toast message!",
+        warning: "This is a warning toast message!",
+      };
+
+      const toastContainer = document.querySelector(".toast-container");
+      const toastButtons = document.querySelectorAll(".toast-trigger");
+
+      function showToast(type = "success") {
+        const message = toastObject[type] || "Default toast message";
+
+        const toast = document.createElement("div");
+        toast.classList.add("toast", `toast-${type}`);
+        toast.innerHTML = `<p>${message}</p>`;
+        toastContainer.appendChild(toast);
+
+        setTimeout(() => {
+          toast.remove();
+        }, 6000);
+      }
+
+      toastButtons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const type = btn.dataset.type;
+          showToast(type);
+        });
+      });
+    </script>
+  </body>
+</html>
