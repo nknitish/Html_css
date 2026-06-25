@@ -1,0 +1,16 @@
+Responsive Design — Senior interview questions
+
+1) How to design a responsive system that supports many device form factors and dynamic containers?
+- Answer: Use mobile-first approach, fluid values, CSS Grid + Flexbox, responsive images, and container queries for component-level adaptivity.
+
+2) How to measure and optimize UX across different viewport sizes?
+- Answer: Use RUM for different device classes, set performance budgets, and test interactive metrics (LCP, INP) across form factors.
+
+3) How to integrate responsive design into a component-driven workflow?
+- Answer: Define component contracts, support container queries, document responsive behaviors, and provide tokens for breakpoints and spacing.
+
+4) How to handle typography scaling across devices for legibility?
+- Answer: Use clamp() for fluid type, set sensible line-length constraints, and test readability at various sizes.
+
+5) How to migrate legacy fixed layouts to responsive designs incrementally?
+- Answer: Introduce fluid containers and responsive wrappers, replace layout primitives with Grid/Flex progressively, and test regressions.

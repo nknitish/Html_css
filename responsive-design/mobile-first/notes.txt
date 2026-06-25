@@ -1,0 +1,26 @@
+What it is:
+- Mobile-first is a strategy where base CSS targets small screens, progressively enhancing for wider viewports.
+
+Why it matters:
+- Encourages performance and simpler default experiences, ensuring core functionality for constrained devices.
+
+Key properties / syntax:
+- Use min-width media queries to add styles for larger breakpoints.
+
+Interview questions:
+1) Q: Why prefer mobile-first over desktop-first?
+   A: Better performance and progressive enhancement for constrained devices.
+2) Q: How to write mobile-first media queries?
+   A: Use @media (min-width: 768px) { ... } to add styles for larger screens.
+3) Q: What are breakpoint strategies?
+   A: Device-based, content-based (preferred), or container-based.
+4) Q: How does mobile-first affect assets?
+   A: Serve smaller assets by default and enhance for larger screens.
+5) Q: How to test responsive behavior?
+   A: Resize browser, use device emulation, and test on real devices.
+
+Common gotchas:
+- Using too many breakpoints complicates maintenance.
+
+Pro tips:
+- Choose breakpoints based on content needs, not device sizes.

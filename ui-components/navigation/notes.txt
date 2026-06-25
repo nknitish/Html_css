@@ -1,0 +1,26 @@
+What it is:
+- Navigation patterns: tabs, breadcrumb, pagination, sidebar, navbar, drawer.
+
+Why it matters:
+- Clear navigation patterns improve discoverability and UX; must be keyboard accessible.
+
+Key properties / syntax:
+- Use role and aria attributes where necessary (role="tablist", role="tab", aria-selected)
+
+Interview questions:
+1) Q: How to implement accessible tabs?
+   A: Use role="tablist" on container, role="tab" on each tab, manage aria-selected and focus.
+2) Q: Should breadcrumb links be semantic?
+   A: Yes—use an ordered list inside a nav with aria-label.
+3) Q: How to make a drawer accessible?
+   A: Trap focus when open and hide inert background.
+4) Q: How to make pagination keyboard-friendly?
+   A: Ensure links are focusable and labeled clearly with page numbers.
+5) Q: What is ARIA's role in navigation?
+   A: Complement semantics when native elements aren't available.
+
+Common gotchas:
+- Forgetting focus management in modal drawers and tab panels.
+
+Pro tips:
+- Use progressive enhancement: standard links when JS is disabled; enhance behavior when available.

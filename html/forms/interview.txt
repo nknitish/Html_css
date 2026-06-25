@@ -1,0 +1,16 @@
+Forms — Senior interview questions
+
+1) How do you design form UX to minimize friction and errors on mobile?
+- Answer: Use appropriate input types, smart defaults, progressive disclosure, input masks sparingly, inline validation, and minimize required fields.
+
+2) How to architect validation across client and server to ensure both UX and security?
+- Answer: Mirror validation rules; client-side for fast feedback, server-side as source-of-truth. Centralize validation logic where possible (shared schema/types) to avoid drift.
+
+3) How to handle complex conditional fields and maintain accessibility?
+- Answer: Show/hide fields with proper aria-expanded and update aria-live for announcements; ensure hidden fields are removed from tab order or aria-hidden when not relevant.
+
+4) How to design resilient form submissions for poor network conditions?
+- Answer: Use optimistic UI cautiously, provide retry/backoff, persist draft locally, and avoid double submissions (disable submit while pending).
+
+5) How to design a validation error system that scales across many forms?
+- Answer: Standardize error codes/messages, link errors to inputs via aria-describedby, centralize translation, and collect telemetry to analyze common failures.

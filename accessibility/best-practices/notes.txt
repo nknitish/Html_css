@@ -1,0 +1,26 @@
+What it is:
+- Practical accessibility rules and patterns to follow across projects.
+
+Why it matters:
+- Ensures inclusivity and legal compliance; improves UX for all users.
+
+Key properties / syntax:
+- Semantic HTML, labels, ARIA judiciously, visible focus, color contrast.
+
+Interview questions:
+1) Q: What is a skip link and why use it?
+   A: A link to jump to main content for keyboard users to bypass repetitive navigation.
+2) Q: What is focus order?
+   A: Logical order in DOM for keyboard navigation.
+3) Q: How to test accessibility?
+   A: Automated tools + manual keyboard and screen reader tests.
+4) Q: Why avoid relying on color alone?
+   A: Color-blind users may not perceive differences; use text or icons too.
+5) Q: What is accessible name computation?
+   A: Algorithm used by AT to derive a name from labels, aria-label, or content.
+
+Common gotchas:
+- Neglecting mobile accessibility and touch target sizes.
+
+Pro tips:
+- Integrate accessibility checks into CI and design tokens for contrast.

@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Semantic Elements — Demo</title>
+    <style>
+      /* Simple layout to show landmarks */
+      body {
+        font-family: system-ui, sans-serif;
+        margin: 0;
+      }
+      header,
+      nav,
+      main,
+      aside,
+      footer,
+      section,
+      article {
+        padding: 12px;
+        border: 1px solid #ddd;
+        margin: 8px;
+      }
+      .layout {
+        display: grid;
+        grid-template-columns: 1fr 300px;
+        gap: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header landmark -->
+    <header><h1>Site Title</h1></header>
+    <!-- Navigation landmark -->
+    <nav aria-label="Main navigation">
+      <a href="#">Home</a> | <a href="#">Docs</a>
+    </nav>
+    <div class="layout">
+      <!-- Main landmark -->
+      <main id="main">
+        <article>
+          <h2>Article Title</h2>
+          <p>
+            This is an <strong>article</strong> element — independent content.
+          </p>
+        </article>
+        <section>
+          <h3>Section</h3>
+          <p>Logical grouping inside main.</p>
+        </section>
+      </main>
+      <!-- Aside landmark -->
+      <aside>
+        <h4>Related</h4>
+        <p>Supplementary info in <code>&lt;aside&gt;</code>.</p>
+      </aside>
+    </div>
+    <footer>Footer content — contact, copyright</footer>
+    <script>
+      // Simple script to highlight current landmark when clicking
+      document.body.addEventListener("click", (e) => {
+        const el = e.target.closest(
+          "header,nav,main,aside,footer,article,section",
+        );
+        if (!el) return;
+        el.style.outline = "3px solid #06f";
+        setTimeout(() => (el.style.outline = "none"), 700);
+      });
+    </script>
+  </body>
+</html>

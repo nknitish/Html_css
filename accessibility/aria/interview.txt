@@ -1,0 +1,16 @@
+ARIA — Senior interview questions
+
+1) How to decide when ARIA is appropriate vs native HTML?
+- Answer: Always prefer native semantics; use ARIA only when native elements cannot express required behavior, following ARIA Authoring Practices.
+
+2) How to ensure ARIA usage doesn't create conflicting semantics across assistive tech?
+- Answer: Keep ARIA usage minimal and test with multiple screen readers; avoid redundant roles and ensure labels are computed correctly.
+
+3) How to implement live regions for dynamic content without overwhelming users?
+- Answer: Use aria-live="polite" for low-priority updates, aria-atomic and aria-relevant to control announcements, and debounce rapid updates.
+
+4) How to make complex widgets (combobox, grid) accessible with ARIA?
+- Answer: Follow WAI-ARIA patterns, maintain keyboard schemas, and mirror native behavior closely.
+
+5) How to perform ARIA code reviews and automated checks?
+- Answer: Add linting rules for ARIA misuse, require manual review for complex widgets, and include accessibility tests in CI.

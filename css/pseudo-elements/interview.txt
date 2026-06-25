@@ -1,0 +1,16 @@
+Pseudo-elements — Senior interview questions
+
+1) When are pseudo-elements appropriate in production components?
+- Answer: For non-essential decorative content, icons, labels, or embellishments that shouldn't be in DOM; avoid placing critical content solely in pseudo-elements.
+
+2) How to animate pseudo-elements efficiently?
+- Answer: Animate transform and opacity where possible; avoid layout-triggering properties; respect reduced-motion.
+
+3) How to ensure pseudo-element content is accessible?
+- Answer: Do not rely on pseudo-elements to convey essential information; mirror content in DOM when necessary for screen readers.
+
+4) How to manage cross-browser differences for ::placeholder styling?
+- Answer: Use vendor-prefixed selectors as needed and test across browsers; fallback to label-based patterns for consistent UI.
+
+5) How to debug unexpected content from pseudo-elements in complex CSS stacks?
+- Answer: Inspect computed styles and use devtools to toggle pseudo-elements visibility; search for content property in stylesheets.

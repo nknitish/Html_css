@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Keyboard Navigation</title>
+    <style>
+      body {
+        font-family: system-ui;
+        padding: 16px;
+      }
+      .skip {
+        position: absolute;
+        left: -9999px;
+      }
+      .visible {
+        position: static;
+        left: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="#main" class="skip" id="skip">Skip to content</a>
+    <nav><a href="#">Home</a> <a href="#">Docs</a></nav>
+    <main id="main">
+      <h1>Keyboard navigation demo</h1>
+      <p>
+        Use Tab / Shift+Tab to navigate and Enter to activate links. Focus the
+        page to see skip link.
+      </p>
+      <button id="show">Show skip link</button>
+    </main>
+    <script>
+      document.getElementById("show").addEventListener("click", () => {
+        const s = document.getElementById("skip");
+        s.classList.add("visible");
+        s.focus();
+        setTimeout(() => s.classList.remove("visible"), 2000);
+      });
+    </script>
+  </body>
+</html>

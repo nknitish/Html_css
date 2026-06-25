@@ -1,0 +1,26 @@
+What it is:
+- CSS custom properties (variables) store values that can be reused and changed at runtime.
+
+Why it matters:
+- Simplifies theming and DRY styling; can be manipulated by JS and by selectors.
+
+Key properties / syntax:
+- --var-name: value; use var(--var-name, fallback)
+
+Interview questions:
+1) Q: Are CSS variables dynamic?
+   A: Yes, they can change via cascade and JavaScript at runtime.
+2) Q: How to provide a fallback?
+   A: var(--name, fallback).
+3) Q: Can variables be used in media queries?
+   A: Not directly for breakpoint values; but they can affect properties inside queries.
+4) Q: Where to define global variables?
+   A: On :root for app-wide scope.
+5) Q: How to scope variables to components?
+   A: Define them on a component selector; they inherit to children.
+
+Common gotchas:
+- Variables do not apply to properties that expect numbers when used in calc() unless defined appropriately.
+
+Pro tips:
+- Use variables for color palettes, spacing scales, and to toggle themes via a class.

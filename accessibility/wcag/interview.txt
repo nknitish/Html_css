@@ -1,0 +1,16 @@
+WCAG — Senior interview questions
+
+1) How do you evaluate a product for WCAG conformance at scale?
+- Answer: Combine automated scans, sampling of critical flows for manual testing, and prioritize remediations by user impact and legal risk.
+
+2) How to implement color systems that meet contrast across themes?
+- Answer: Define semantic color tokens, compute contrast ratios during design/build, and adjust palettes or provide accessible variants for themes.
+
+3) How to handle multimedia accessibility requirements (captions, audio descriptions)?
+- Answer: Integrate captioning workflow, provide transcripts, and ensure media players expose captions and keyboard controls.
+
+4) How to stay current with evolving accessibility standards and regulations?
+- Answer: Monitor W3C/WAI publications, industry guidance, and maintain a playbook for compliance and testing.
+
+5) How to design WCAG-friendly components without slowing development?
+- Answer: Build accessible primitives, enforce patterns via linting and code review, and provide documentation and examples.

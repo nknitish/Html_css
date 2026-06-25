@@ -1,0 +1,27 @@
+What it is:
+- Semantic HTML elements are tags that convey meaning about their content (header, main, section, article, aside, footer, nav).
+
+Why it matters:
+- They improve accessibility, SEO and maintainability by communicating intent to browsers and assistive tech.
+
+Key properties / syntax:
+- Use <header>, <nav>, <main>, <section>, <article>, <aside>, <footer> appropriately; only one <main> per document.
+
+Interview questions:
+1) Q: What is the difference between <section> and <article>?
+   A: Article is independent content; section groups related content.
+2) Q: How many <main> elements should a page have?
+   A: Exactly one.
+3) Q: Why use semantic elements for accessibility?
+   A: Screen readers and AT rely on landmarks to navigate.
+4) Q: When to use <aside>?
+   A: For tangential or related info such as sidebars.
+5) Q: What is a landmark?
+   A: Named regions (nav, main, header, etc.) exposed to assistive tech.
+
+Common gotchas:
+- Overusing sections without headings reduces clarity.
+- Using multiple <main> tags causes confusion.
+
+Pro tips:
+- Add aria-label to nav for clarity; use skip links for keyboard users.

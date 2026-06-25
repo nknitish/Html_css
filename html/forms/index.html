@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Forms — Demo</title>
+    <style>
+      body {
+        font-family: system-ui;
+        margin: 20px;
+      }
+      form {
+        max-width: 420px;
+        border: 1px solid #ddd;
+        padding: 16px;
+        border-radius: 6px;
+      }
+      label {
+        display: block;
+        margin-top: 10px;
+      }
+      input,
+      select,
+      textarea {
+        width: 100%;
+        padding: 8px;
+        margin-top: 6px;
+      }
+      .error {
+        color: #b00;
+        font-size: 0.9rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Form controls demo</h1>
+    <form id="demo">
+      <label for="name">Name</label>
+      <input id="name" name="name" type="text" required />
+
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" required />
+
+      <label for="role">Role</label>
+      <select id="role" name="role">
+        <option value="dev">Developer</option>
+        <option value="pm">Product</option>
+      </select>
+
+      <label for="bio">Bio</label>
+      <textarea id="bio" name="bio" rows="4"></textarea>
+
+      <label><input type="checkbox" id="agree" required /> I agree</label>
+
+      <button type="submit">Submit</button>
+      <div id="msg" aria-live="polite"></div>
+    </form>
+    <script>
+      // Basic validation messaging that supplements native constraints
+      const form = document.getElementById("demo");
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        if (!form.checkValidity()) {
+          document.getElementById("msg").textContent = "Please fix errors.";
+          return;
+        }
+        document.getElementById("msg").textContent =
+          "Form is valid — ready to submit.";
+      });
+    </script>
+  </body>
+</html>

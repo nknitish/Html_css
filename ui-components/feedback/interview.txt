@@ -1,0 +1,16 @@
+Feedback Components — Senior interview questions
+
+1) How to design accessible dialogs and manage focus without leaking it?
+- Answer: Implement focus trap, restore focus to trigger on close, use role="dialog" and aria-modal, and handle Escape and click-outside for dismissal.
+
+2) How to architect toast systems for high-throughput UIs (many events)?
+- Answer: Deduplicate messages, rate-limit displays, use aria-live polite for non-blocking announcements, and queue messages intelligently.
+
+3) How to implement progress feedback for long-running background tasks?
+- Answer: Use determinate progress when possible with aria-valuenow, or skeleton placeholders and incremental updates via web sockets or polling.
+
+4) How to balance animation and accessibility for motion-sensitive users?
+- Answer: Respect prefers-reduced-motion and provide static alternatives; reduce animation duration and avoid layout-shifting animations.
+
+5) How to ensure tooltips are usable on touch devices?
+- Answer: Provide alternate activation (taps), ensure tooltip content is reachable and not reliant on hover-only interactions.

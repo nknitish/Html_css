@@ -1,0 +1,26 @@
+What it is:
+- Keyboard navigation ensures interfaces are operable without a mouse (Tab, Shift+Tab, Enter, Escape, arrow keys).
+
+Why it matters:
+- Critical for users with motor impairments and power users preferring keyboard workflows.
+
+Key properties / syntax:
+- tabindex, role, aria-* for managing focusable elements; use natural focus order where possible.
+
+Interview questions:
+1) Q: How to make non-native element keyboard-focusable?
+   A: Add tabindex="0" but implement keyboard handlers.
+2) Q: What is focus trap?
+   A: Keeping keyboard focus within a modal/dialog until closed.
+3) Q: How to handle Escape key in dialogs?
+   A: Close dialog and return focus to logical trigger.
+4) Q: When to use tabindex="-1"?
+   A: Make element programmatically focusable but remove it from tab order.
+5) Q: How to support arrow keys in menus?
+   A: Implement roving tabindex pattern and handle key events.
+
+Common gotchas:
+- Overusing tabindex to reorder focus can confuse users; prefer DOM order.
+
+Pro tips:
+- Use focus-visible or :focus-visible to show outlines only when keyboard navigation is used.

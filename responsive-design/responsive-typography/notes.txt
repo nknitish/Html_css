@@ -1,0 +1,26 @@
+What it is:
+- Responsive typography scales font sizes across viewports for readability.
+
+Why it matters:
+- Improves legibility and hierarchy across devices.
+
+Key properties / syntax:
+- clamp(), calc(), responsive units (vw, rem)
+
+Interview questions:
+1) Q: How to implement fluid typography?
+   A: Use clamp() combining rem and vw values.
+2) Q: Why not use vw alone for fonts?
+   A: It may produce too-large or too-small fonts at extremes; clamp() constrains it.
+3) Q: What is the base font-size strategy?
+   A: Use rem-based scale for predictable sizing across components.
+4) Q: How to test readability?
+   A: Check line length, leading, and contrast across breakpoints.
+5) Q: What metrics indicate readable typography?
+   A: 45–75 characters per line is a common guideline.
+
+Common gotchas:
+- Using inconsistent base sizes causes scaling problems across components.
+
+Pro tips:
+- Define a type scale and express sizes relative to a single root variable.

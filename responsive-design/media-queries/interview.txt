@@ -1,0 +1,16 @@
+Media Queries — Senior interview questions
+
+1) How to design maintainable breakpoint systems for large projects?
+- Answer: Use a small set of content-driven breakpoints, centralize in variables/tokens, and prefer fluid scaling between breakpoints.
+
+2) How to debug media query ordering and specificity issues?
+- Answer: Check the cascade order and evaluated media queries in devtools, ensure mobile-first ordering and avoid conflicting rules.
+
+3) How to use media queries to handle high-density screens and accessibility preferences?
+- Answer: Use resolution queries for high-DPI assets and prefers-reduced-motion/contrast queries for accessibility-driven adjustments.
+
+4) How to implement container-based responsiveness vs viewport-based?
+- Answer: Use container queries for component-local responsiveness when supported and provide fallbacks using media queries.
+
+5) How to maintain test coverage for responsive behavior?
+- Answer: Use visual regression across multiple viewport sizes and automated E2E tests simulating different screen sizes.

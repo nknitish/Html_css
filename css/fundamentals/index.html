@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>CSS Fundamentals — Demo</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- styles.css demonstrates box model, cascade, specificity and basic layout -->
+  </head>
+  <body>
+    <main>
+      <h1>CSS Fundamentals</h1>
+      <section class="box-model">
+        <h2>Box model</h2>
+        <div class="box">Content</div>
+      </section>
+      <section class="specificity">
+        <h2>Specificity & Cascade</h2>
+        <p class="example special">Which rule wins?</p>
+      </section>
+    </main>
+    <script>
+      // Toggle a class to illustrate inheritance and cascade
+      document.querySelector(".box").addEventListener("click", () => {
+        document.body.classList.toggle("alt");
+      });
+    </script>
+  </body>
+</html>

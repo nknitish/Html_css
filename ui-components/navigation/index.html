@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Navigation</title>
+    <style>
+      body {
+        font-family: system-ui;
+        padding: 16px;
+      }
+      .tabs {
+        display: flex;
+        gap: 8px;
+      }
+      .tab {
+        padding: 8px 12px;
+        border-radius: 6px;
+        border: 1px solid #ddd;
+        cursor: pointer;
+      }
+      .tab.active {
+        background: #0366d6;
+        color: #fff;
+      }
+      .breadcrumb {
+        font-size: 0.9rem;
+        margin: 12px 0;
+      }
+      .sidebar {
+        width: 200px;
+        border: 1px solid #ddd;
+        padding: 12px;
+      }
+      .drawer {
+        position: fixed;
+        left: -260px;
+        top: 0;
+        height: 100%;
+        width: 260px;
+        background: #fff;
+        border-right: 1px solid #ddd;
+        transition: left 0.2s;
+      }
+      .drawer.open {
+        left: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Navigation patterns</h1>
+    <div class="tabs" id="tabs">
+      <div class="tab active">Tab A</div>
+      <div class="tab">Tab B</div>
+    </div>
+    <div class="breadcrumb">Home / Docs / Topic</div>
+    <div class="sidebar">Sidebar links</div>
+    <button id="openDrawer">Open Drawer</button>
+    <div class="drawer" id="drawer">
+      Drawer content <button id="closeDrawer">Close</button>
+    </div>
+
+    <script>
+      document.querySelectorAll(".tab").forEach((t) =>
+        t.addEventListener("click", () => {
+          document
+            .querySelectorAll(".tab")
+            .forEach((x) => x.classList.remove("active"));
+          t.classList.add("active");
+        }),
+      );
+      document
+        .getElementById("openDrawer")
+        .addEventListener("click", () =>
+          document.getElementById("drawer").classList.add("open"),
+        );
+      document
+        .getElementById("closeDrawer")
+        .addEventListener("click", () =>
+          document.getElementById("drawer").classList.remove("open"),
+        );
+    </script>
+  </body>
+</html>

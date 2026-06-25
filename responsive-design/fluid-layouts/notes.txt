@@ -1,0 +1,26 @@
+What it is:
+- Fluid layouts use relative sizing (%, vw, rem) to adapt smoothly across viewports.
+
+Why it matters:
+- Avoids abrupt jumps and creates smoother responsive experiences.
+
+Key properties / syntax:
+- width: 100%, max-width, vw/vh units, clamp() for constraints.
+
+Interview questions:
+1) Q: What is clamp() used for?
+   A: Bound fluid values between min and max: clamp(min, preferred, max).
+2) Q: When use vw vs %?
+   A: vw is viewport-relative; % is relative to parent element.
+3) Q: How to maintain readable line lengths?
+   A: Use max-width with rem-based measures and responsive typography.
+4) Q: What is container padding strategy?
+   A: Keep horizontal padding constant using container pattern.
+5) Q: How to combine fluid and breakpoints?
+   A: Use fluid values inside media queries for fine control.
+
+Common gotchas:
+- Overusing vw for fonts can create extremes on very large/small screens.
+
+Pro tips:
+- Use clamp() to create fluid typographic scales and safe min/max values.

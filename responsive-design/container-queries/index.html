@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Container Queries</title>
+    <style>
+      .card {
+        container-type: size;
+        border: 1px solid #ddd;
+        padding: 12px;
+        border-radius: 8px;
+      }
+      .card h2 {
+        font-size: 1rem;
+      }
+      @container (min-width:300px) {
+        .card h2 {
+          font-size: 1.4rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Container Queries Demo</h1>
+    <div class="card">
+      <h2>Responsive inside container</h2>
+      <p>The heading grows when the card's container is wide enough.</p>
+    </div>
+  </body>
+</html>

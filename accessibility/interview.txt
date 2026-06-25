@@ -1,0 +1,16 @@
+Accessibility — Senior interview questions
+
+1) How do you embed accessibility into the engineering lifecycle?
+- Answer: Include a11y requirements in specs, automated checks in CI, component-level ARIA contracts, design tokens for contrast, and regular manual audits.
+
+2) How to prioritize accessibility fixes in a legacy codebase with limited resources?
+- Answer: Triage by user impact, start with keyboard and semantic fixes, add critical pages to a remediation backlog, and create patterns to prevent regressions.
+
+3) How to measure accessibility beyond automated linting?
+- Answer: Use manual screen reader testing, keyboard-only flows, user testing with diverse participants, and task-based success metrics.
+
+4) How to design accessibility for complex interactive widgets (grids, charts)?
+- Answer: Provide ARIA roles and keyboard schemas, maintain focusable controls, expose data via accessible tables or summaries, and document behavior for assistive tech.
+
+5) How to make accessibility an organizational priority and avoid band-aid fixes?
+- Answer: Train teams, incorporate a11y into PR review, reward accessible design, and provide easy-to-use component primitives that are accessible by default.

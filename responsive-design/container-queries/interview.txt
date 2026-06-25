@@ -1,0 +1,16 @@
+Container Queries — Senior interview questions
+
+1) How to adopt container queries in an existing component library safely?
+- Answer: Add container-type:size to container roots, progressively enhance components, and provide fallbacks using media queries for older browsers.
+
+2) How to design components that respond to container size rather than viewport for reusability?
+- Answer: Encapsulate responsive rules using @container, avoid assumptions about global viewport, and test components in varying container contexts.
+
+3) What are common performance considerations with container queries?
+- Answer: Browser implements resize observation; avoid excessive nested container queries and test rendering impact; batch style recalculations.
+
+4) How to structure CSS to avoid duplication across container and media queries?
+- Answer: Centralize shared styles and use container queries for component-specific overrides while keeping base styles generic.
+
+5) How to handle polyfills or fallbacks in environments without container query support?
+- Answer: Provide graceful degradation via media queries or JS-driven size observers that add classes.

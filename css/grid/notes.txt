@@ -1,0 +1,26 @@
+What it is:
+- CSS Grid is a 2D layout system for rows and columns allowing precise placement.
+
+Why it matters:
+- Ideal for complex page layouts and responsive rearrangement.
+
+Key properties / syntax:
+- display:grid; grid-template-columns/rows; grid-area; grid-auto-flow; gap; minmax; auto-fit/auto-fill
+
+Interview questions:
+1) Q: What is minmax()?
+   A: Defines a size range for a track (minmax(min, max)).
+2) Q: How do auto-fit and auto-fill differ?
+   A: auto-fit collapses empty tracks, auto-fill keeps them.
+3) Q: When to use Grid vs Flexbox?
+   A: Grid for 2D, Flexbox for 1D alignment.
+4) Q: How to place an item across columns?
+   A: Use grid-column: start / end or grid-column: span N.
+5) Q: What is grid-template-areas?
+   A: Named areas for intuitive layout placement.
+
+Common gotchas:
+- Overcomplicating simple one-dimensional layouts with Grid.
+
+Pro tips:
+- Use grid for layout shells and flexbox inside components for alignment.

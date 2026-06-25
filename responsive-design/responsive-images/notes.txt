@@ -1,0 +1,26 @@
+What it is:
+- Responsive images allow serving appropriate image sources using srcset, sizes, and picture for art-direction.
+
+Why it matters:
+- Reduces bandwidth and improves performance by serving smaller images where appropriate.
+
+Key properties / syntax:
+- <img srcset> with candidate strings, sizes attribute, <picture> + <source> for format and art-direction.
+
+Interview questions:
+1) Q: What is the purpose of sizes attribute?
+   A: Tells the browser the rendered image size, enabling better selection from srcset.
+2) Q: How does <picture> differ from srcset?
+   A: picture allows different images by media/type for art-direction; srcset selects based on resolution/width.
+3) Q: Why use modern formats like WebP/AVIF?
+   A: Smaller file sizes for same quality, improving performance.
+4) Q: How to lazy-load images?
+   A: Use loading="lazy" on <img>.
+5) Q: Should alt be omitted for decorative images?
+   A: No — use alt="" to indicate decorative images to screen readers.
+
+Common gotchas:
+- Wrong sizes values lead to suboptimal image selection; test on devices.
+
+Pro tips:
+- Generate responsive images during build and keep srcset lists in markup or via responsive image helpers.

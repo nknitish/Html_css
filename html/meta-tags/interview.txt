@@ -1,0 +1,16 @@
+Meta Tags — Senior interview questions
+
+1) How do you manage dynamic metadata for SEO in an SPA at scale?
+- Answer: Use SSR or hybrid rendering (ISR/prerender) for crawlable content; implement a metadata strategy in the router and validate with Search Console.
+
+2) How to handle duplicate content and canonicalization across multisite setups?
+- Answer: Emit canonical links, normalize URLs, and consolidate duplicates server-side; use hreflang for localized variants.
+
+3) How do social previews (Open Graph/Twitter) affect engineering decisions?
+- Answer: Ensure server serves correct OG tags, handle image generation for dynamic content, and test sharing across platforms.
+
+4) How to audit metadata for large sites?
+- Answer: Crawl site, check titles/descriptions for uniqueness and length, validate structured data, and monitor via Search Console.
+
+5) How to minimize harmful metadata regressions during deploys?
+- Answer: Keep metadata generation centralized, add tests validating expected tags, and use staging previews for manual checks.

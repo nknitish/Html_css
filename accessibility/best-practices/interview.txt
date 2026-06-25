@@ -1,0 +1,16 @@
+Best Practices — Senior interview questions
+
+1) How to introduce accessibility KPIs and measure progress for a product?
+- Answer: Track automated audit pass rates, manual test coverage for critical flows, user-impact metrics, and prioritize by affected user tasks.
+
+2) How to scale accessibility training across engineering and design teams?
+- Answer: Create concise cookbooks, run hands-on workshops, embed a11y checks in PR templates, and set mentor rotation for reviews.
+
+3) How to include accessibility in UX research and product discovery?
+- Answer: Include participants with disabilities, validate prototypes with assistive tech, and measure task completion for diverse users.
+
+4) How to balance shipping velocity with accessibility obligations?
+- Answer: Prioritize critical accessibility bugs, provide accessible primitives, and integrate a11y checks into CI to prevent regressions.
+
+5) How to maintain accessibility documentation and patterns?
+- Answer: Keep a living pattern library with examples, code snippets, and a11y notes; update alongside component changes.

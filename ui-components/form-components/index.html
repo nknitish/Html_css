@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Form Components</title>
+    <style>
+      body {
+        font-family: system-ui;
+        padding: 16px;
+      }
+      label {
+        display: block;
+        margin-top: 8px;
+      }
+      input,
+      textarea,
+      select {
+        padding: 8px;
+        width: 100%;
+        max-width: 360px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+      }
+      .switch {
+        display: inline-block;
+        width: 50px;
+        height: 28px;
+        background: #ddd;
+        border-radius: 999px;
+        position: relative;
+      }
+      .switch input {
+        display: none;
+      }
+      .switch .knob {
+        position: absolute;
+        top: 3px;
+        left: 3px;
+        width: 22px;
+        height: 22px;
+        background: #fff;
+        border-radius: 50%;
+        transition: all 0.2s;
+      }
+      .switch.on {
+        background: #4caf50;
+      }
+      .switch.on .knob {
+        left: 25px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Form Components</h1>
+    <label>Text <input type="text" placeholder="Your name" /></label>
+    <label>Email <input type="email" placeholder="you@example.com" /></label>
+    <label>Textarea <textarea rows="3"></textarea></label>
+    <label
+      >Select
+      <select>
+        <option>One</option>
+        <option>Two</option>
+      </select></label
+    >
+    <label><input type="checkbox" /> Checkbox</label>
+    <label><input type="radio" name="r" /> Option A</label>
+
+    <h2>Switch (custom)</h2>
+    <div class="switch" id="sw"><div class="knob"></div></div>
+
+    <script>
+      const sw = document.getElementById("sw");
+      sw.addEventListener("click", () => sw.classList.toggle("on"));
+    </script>
+  </body>
+</html>

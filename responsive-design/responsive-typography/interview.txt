@@ -1,0 +1,16 @@
+Responsive Typography — Senior interview questions
+
+1) How to design a typographic system that scales between mobile and large desktop effectively?
+- Answer: Use a modular scale, clamp() for fluid sizes, rem-based spacing, and tune line-height/measure at each scale.
+
+2) How to handle accessibility concerns (contrast, readability) with responsive type?
+- Answer: Maintain legible sizes at small viewports, ensure contrast ratios and dynamic adjustments for user preferences.
+
+3) How to test typography for multiple languages with differing word lengths and scripts?
+- Answer: Include representative locales in visual tests, validate fallback fonts, and adapt line-length and spacing.
+
+4) How to integrate responsive typography into component libraries?
+- Answer: Use tokenized font sizes and responsive helpers; provide semantic tokens (heading-xl, body-md) that map to responsive values.
+
+5) How to avoid layout shifts when fonts load (FOIT/FOUT)?
+- Answer: Use font-display:optional/ swap, preconnect/preload fonts, and reserve space to reduce Cumulative Layout Shift.

@@ -1,0 +1,26 @@
+What it is:
+- Button components: primary, secondary, ghost, icon, disabled, loading.
+
+Why it matters:
+- Buttons are primary action points in UIs; consistent patterns improve UX.
+
+Key properties / syntax:
+- Use <button> with type attributes; aria-pressed for toggle buttons; disabled attribute for inactive state.
+
+Interview questions:
+1) Q: How to show a loading state?
+   A: Use aria-busy and disable the button; update visual label.
+2) Q: How to make icon-only accessible?
+   A: Use aria-label describing the action.
+3) Q: When to use <button> vs <a>?
+   A: <button> for actions; <a> for navigation links.
+4) Q: How to prevent multiple submits?
+   A: Disable button after click or debounce the handler.
+5) Q: Why prefer semantic buttons?
+   A: They handle keyboard and form behaviors natively.
+
+Common gotchas:
+- Using <div> for clickable elements without keyboard support.
+
+Pro tips:
+- Use CSS custom properties for button palettes and easy theming.

@@ -1,0 +1,8 @@
+/* Navigation components styles: tabs, breadcrumb, sidebar, drawer */
+.tabs{display:flex;gap:8px}
+.tab{padding:8px 12px;border-radius:6px;border:1px solid #ddd;cursor:pointer}
+.tab.active{background:#0366d6;color:#fff}
+.breadcrumb{font-size:.9rem;margin:12px 0}
+.sidebar{width:200px;border:1px solid #ddd;padding:12px}
+.drawer{position:fixed;left:-260px;top:0;height:100%;width:260px;background:#fff;border-right:1px solid #ddd;transition:left .2s}
+.drawer.open{left:0}

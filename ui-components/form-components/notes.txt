@@ -1,0 +1,26 @@
+What it is:
+- Input, textarea, select, checkbox, radio, switch, date picker components and patterns.
+
+Why it matters:
+- Correct controls and states ensure good UX and accessibility.
+
+Key properties / syntax:
+- Use type attributes (email, number, date), aria attributes, and labels for accessibility.
+
+Interview questions:
+1) Q: How to make switches accessible?
+   A: Use role="switch" and aria-checked or a hidden input.
+2) Q: How to group radio buttons?
+   A: Use the same name attribute and a fieldset with a legend.
+3) Q: How to style placeholder vs label?
+   A: Placeholder is not a substitute for label; always provide a label.
+4) Q: How to handle native date pickers?
+   A: Use input type="date"; provide polyfills for unsupported browsers.
+5) Q: How to validate email client-side?
+   A: Use type="email" and pattern if stricter constraints are needed.
+
+Common gotchas:
+- Styling native controls inconsistently across browsers; test widely.
+
+Pro tips:
+- Use accessible names and connect error messages via aria-describedby.

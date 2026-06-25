@@ -1,0 +1,16 @@
+Form Components — Senior interview questions
+
+1) How to standardize form component APIs for state management across frameworks?
+- Answer: Define a controlled/uncontrolled contract, provide hooks for validation, and design consistent props for value/onChange and validation messages.
+
+2) How to build accessible custom controls (switches, date pickers) that match native behavior?
+- Answer: Mirror keyboard interactions, use ARIA roles and states, and ensure focus management and announcements for dynamic changes.
+
+3) How to integrate server-side validation messages into form components gracefully?
+- Answer: Normalise server errors into a common schema, map to inputs via keys, and surface messages with aria-describedby and inline UI.
+
+4) How to test form components for edge cases and internationalization?
+- Answer: Test with long values, different locales (numbers/dates), RTL, and simulated slow networks for file inputs.
+
+5) How to design forms to minimize accidental data loss?
+- Answer: Autosave drafts, warn on navigation with unsaved changes, and provide clear save/submit semantics.

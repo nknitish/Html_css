@@ -1,0 +1,16 @@
+Responsive Images — Senior interview questions
+
+1) How to design an image pipeline to serve responsive images across many devices and locales?
+- Answer: Automate generation of multiple formats/sizes, store with consistent naming/metadata, expose via CDN with caching and client hints.
+
+2) How to choose sizes and breakpoints for srcset to maximize efficiency?
+- Answer: Base choices on common device widths and design layout sizes (container widths); prefer fewer well-chosen candidates over exhaustive lists.
+
+3) How to handle art-direction differences between breakpoints?
+- Answer: Use <picture> with source elements and media queries to switch artworks based on layout needs.
+
+4) How to monitor and optimize image performance post-release?
+- Answer: Track image payloads in RUM, identify heavy images, and iterate on format/quality settings; use adaptive serving when possible.
+
+5) What are security/privacy considerations for image CDN and third-party embeds?
+- Answer: Ensure proper CORS/Referrer policies, sanitize user-supplied image URLs, and avoid leaking PII in image paths or metadata.

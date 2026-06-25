@@ -1,0 +1,16 @@
+Buttons — Senior interview questions
+
+1) How to design button APIs that work across web and mobile clients?
+- Answer: Provide semantic roles (type, variant, size), use accessible labels, and expose low-level hooks (classNames) for native wrappers; document touch target sizes and states.
+
+2) How to architect a consistent loading pattern across many async actions?
+- Answer: Centralize loading behavior (skeleton vs spinner), standardize aria-busy/aria-live usage, and provide utility hooks to manage disabling and retries.
+
+3) How to optimize button performance when many exist on a page?
+- Answer: Avoid heavy event handlers per button; delegate where possible, and keep styling efficient (use class toggles).
+
+4) How to handle icon-only buttons accessibly?
+- Answer: Always provide aria-label or visually-hidden text and ensure focus styles are visible.
+
+5) How to design for internationalization with buttons (length, direction)?
+- Answer: Allow flexible padding, avoid fixed widths when possible, test with long translations and RTL locales.

@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>WCAG — Demo</title>
+    <style>
+      body {
+        font-family: system-ui;
+        padding: 16px;
+      }
+      .low {
+        color: #666;
+        background: #fff;
+      }
+      .high {
+        color: #000;
+        background: #fff;
+      }
+      .sample {
+        padding: 8px;
+        margin: 8px 0;
+        border-radius: 6px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>WCAG Contrast Demo</h1>
+    <div class="sample low">Low contrast example — may fail WCAG AA</div>
+    <div class="sample high">
+      High contrast example — better for accessibility
+    </div>
+    <p>
+      Use tools (axe, Lighthouse) to measure contrast ratios programmatically.
+    </p>
+  </body>
+</html>

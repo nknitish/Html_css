@@ -1,0 +1,26 @@
+What it is:
+- Selectors target elements to apply styles: type, class, ID, attribute, combinators.
+
+Why it matters:
+- Precise selectors enable maintainable and efficient stylesheets.
+
+Key properties / syntax:
+- element, .class, #id, [attr=value], E > F, E + F, E ~ F
+
+Interview questions:
+1) Q: What is the difference between E F and E > F?
+   A: E F selects descendants; E > F selects direct children only.
+2) Q: What is an attribute selector?
+   A: [attr=value] to match elements with attributes.
+3) Q: When to avoid overly specific selectors?
+   A: To keep CSS flexible and reusable; prefer class-based selectors.
+4) Q: What is the general sibling selector?
+   A: E ~ F selects siblings after E.
+5) Q: How to select nth child?
+   A: Use :nth-child(2n+1) etc.
+
+Common gotchas:
+- Using ID selectors for styling leads to high specificity; avoid for reusable components.
+
+Pro tips:
+- Favor class selectors and BEM-like naming for predictable specificity.

@@ -1,0 +1,26 @@
+What it is:
+- WCAG is a set of guidelines for web accessibility (Perceivable, Operable, Understandable, Robust).
+
+Why it matters:
+- Ensures content is usable for people with disabilities and meets legal standards in many regions.
+
+Key properties / syntax:
+- Contrast ratios, keyboard operability, semantic HTML, ARIA as a supplement.
+
+Interview questions:
+1) Q: What are WCAG principles?
+   A: Perceivable, Operable, Understandable, Robust (POUR).
+2) Q: What contrast ratio is required for AA?
+   A: 4.5:1 for normal text; 3:1 for large text.
+3) Q: What is ARIA's role relative to WCAG?
+   A: ARIA supplements native semantics when needed.
+4) Q: How to test accessibility?
+   A: Automated tools + manual testing with keyboard and screen readers.
+5) Q: What is focus visibility?
+   A: Clear visual indicator when elements receive focus.
+
+Common gotchas:
+- Overreliance on automated tools; must include manual testing.
+
+Pro tips:
+- Keep color choices and contrast tokens in design system for consistent compliance.

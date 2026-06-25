@@ -1,0 +1,16 @@
+Pseudo-classes — Senior interview questions
+
+1) How do you design accessible focus states across a large component library?
+- Answer: Use :focus-visible for keyboard focus cues, standardize focus tokens, and ensure contrast and sizing for focus outlines.
+
+2) How to avoid specificity spikes when using pseudo-classes in complex selectors?
+- Answer: Keep pseudo-classes appended to class selectors (.btn:focus) not nested deep; avoid combining many specificity-increasing parts.
+
+3) How to handle hover interactions on touch devices?
+- Answer: Use pointer media queries (pointer: fine) to enable hover effects only on devices that support it and ensure touch fallback behaviors.
+
+4) How to implement stateful UI (active/checked) in CSS without JS where possible?
+- Answer: Use checkbox/radio tricks combined with :checked and sibling selectors, but be cautious about accessibility and semantics.
+
+5) How to test complex pseudo-class behavior across browsers?
+- Answer: Use end-to-end tests and manual checks across target devices; use feature queries and fallbacks for inconsistent behaviors.

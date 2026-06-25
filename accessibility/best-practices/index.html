@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Accessibility Best Practices</title>
+    <style>
+      body {
+        font-family: system-ui;
+        padding: 16px;
+      }
+      pre {
+        background: #f7f7f7;
+        padding: 12px;
+        border-radius: 6px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Accessibility Best Practices</h1>
+    <ul>
+      <li>Use semantic HTML</li>
+      <li>Ensure keyboard operability</li>
+      <li>Provide alt text and captions</li>
+      <li>Test with screen readers</li>
+    </ul>
+    <h2>Skip link example</h2>
+    <a href="#content" style="position: absolute; left: -9999px" id="skip"
+      >Skip to content</a
+    >
+    <main id="content"><p>Main content</p></main>
+  </body>
+</html>

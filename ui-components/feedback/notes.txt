@@ -1,0 +1,26 @@
+What it is:
+- Feedback components (modal, toast, tooltip, snackbar, progress, skeleton) inform users about state and results.
+
+Why it matters:
+- They give users confirmation, errors, and status; must be accessible and non-intrusive.
+
+Key properties / syntax:
+- Use ARIA roles (role="dialog"), aria-live for toasts, focus trapping for dialogs.
+
+Interview questions:
+1) Q: How to make modal accessible?
+   A: Use role="dialog", aria-modal="true", trap focus, return focus after close.
+2) Q: What is aria-live used for?
+   A: Announce dynamic content like toasts to assistive tech.
+3) Q: How to create a non-blocking toast?
+   A: Show briefly without stealing focus and use aria-live polite.
+4) Q: How to implement skeleton loaders?
+   A: Use animated gradients; replace with content when data loads.
+5) Q: How to animate progress bars accessibly?
+   A: Expose progress via aria-valuenow / aria-valuemax / aria-valuemin and visible labels.
+
+Common gotchas:
+- Forgetting to manage focus and keyboard navigation in dialogs.
+
+Pro tips:
+- Use reduced-motion media query to respect user preferences and avoid motion for accessibility.

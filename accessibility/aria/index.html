@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>ARIA — Demo</title>
+    <style>
+      body {
+        font-family: system-ui;
+        padding: 16px;
+      }
+      .live {
+        border: 1px dashed #ccc;
+        padding: 8px;
+        margin-top: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>ARIA examples</h1>
+    <button id="announce">Announce status</button>
+    <div class="live" role="status" aria-live="polite" id="status">Idle</div>
+
+    <script>
+      document.getElementById("announce").addEventListener("click", () => {
+        document.getElementById("status").textContent =
+          "Saved at " + new Date().toLocaleTimeString();
+      });
+    </script>
+  </body>
+</html>

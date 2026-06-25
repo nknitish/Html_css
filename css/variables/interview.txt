@@ -1,0 +1,16 @@
+Variables — Senior interview questions
+
+1) How to design a token system using CSS variables for a large product?
+- Answer: Define semantic tokens (color roles, spacing scale, typography scale) on :root, allow overrides per theme or component, and keep mapping between design tokens and variable names.
+
+2) How to handle runtime theming without layout flashes?
+- Answer: Apply theme class early (server or inline script), set variables on root/class, and avoid heavy transitions on critical properties.
+
+3) When to use CSS variables vs preprocessor variables?
+- Answer: Use CSS variables for runtime theming and inheritance benefits; use preprocessors for build-time calculations or legacy fallbacks.
+
+4) How to structure variables to support component isolation and composition?
+- Answer: Use global tokens for base values and component-scoped variables for local adjustments; document variable contracts for components.
+
+5) How to migrate existing color values into variables safely?
+- Answer: Introduce variables mapping to existing colors, replace usages incrementally, and test across themes and contrast requirements.

@@ -1,0 +1,16 @@
+Media — Senior interview questions
+
+1) How do you balance media quality and performance for large-scale apps?
+- Answer: Use responsive images, modern formats (WebP/AVIF), adaptive streaming for video, CDN edge caching, and client hints to serve appropriate assets.
+
+2) How to implement accessible media (captions, transcripts) at scale?
+- Answer: Integrate subtitle generation (human-reviewed or ASR with correction), store captions as separate tracks, and ensure caption files are versioned and localized.
+
+3) How to handle cross-origin iframes and security concerns?
+- Answer: Use sandboxing, proper headers (X-Frame-Options / CSP frame-ancestors), and postMessage patterns with origin checks.
+
+4) How to implement lazy-loading strategies for media-heavy pages?
+- Answer: Use loading="lazy" for images, intersection observers for custom lazy loading, and prioritize hero assets for preloading.
+
+5) How to architect a media pipeline for multiple formats and sizes?
+- Answer: Build a server-side pipeline to transcode and generate responsive variants, store with consistent naming, and expose via a CDN with cache-control.

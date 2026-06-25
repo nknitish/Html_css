@@ -1,0 +1,16 @@
+Mobile First — Senior interview questions
+
+1) How to choose breakpoints in a content-driven design system?
+- Answer: Use content-first breakpoints based on when layout or typography needs to change, not device sizes.
+
+2) How to minimize CSS duplication when using mobile-first with many components?
+- Answer: Use shared tokens, utility classes for spacing, and component-level responsive rules with variables.
+
+3) How to test mobile-first approaches across real devices?
+- Answer: Use device labs, BrowserStack, and physical device testing for touch and performance characteristics.
+
+4) How to handle feature differences on mobile (touch gestures) vs desktop?
+- Answer: Detect pointer and hover capabilities (pointer media queries), provide alternate interactions for keyboard and touch.
+
+5) How to measure success of mobile-first refactors?
+- Answer: Monitor engagement, conversion, and performance metrics across device classes, and collect user feedback.

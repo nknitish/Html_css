@@ -1,0 +1,16 @@
+Navigation — Senior interview questions
+
+1) How to design accessible tab panels that maintain keyboard and screen reader compatibility?
+- Answer: Implement role="tablist" and role="tab" with aria-selected, manage focus, and lazy-render or pre-render tab panels as appropriate for performance.
+
+2) How to design breadcrumb and navigation structures for deep content hierarchies?
+- Answer: Use semantic lists inside nav, include structured data if needed, and ensure links are descriptive; consider secondary navigation patterns for breadth.
+
+3) How to implement progressive disclosure for complex sidebars?
+- Answer: Use collapsible sections with aria-expanded and remember state per user; provide keyboard shortcuts and ensure link focus order.
+
+4) How to handle navigation state across nested SPA routes and preserve scroll/focus?
+- Answer: Store scroll positions per route, restore on back/forward, and move focus to meaningful anchors on route changes.
+
+5) How to design responsive navigation (hamburger vs visible) for accessibility?
+- Answer: Ensure hamburger controls are buttons with aria-expanded, provide skip links, and do not hide navigation from AT when collapsed.

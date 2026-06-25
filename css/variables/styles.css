@@ -1,0 +1,24 @@
+:root {
+  --bg: #fff;
+  --fg: #111;
+  --accent: #0066ff;
+  --padding: 12px;
+}
+body {
+  font-family: system-ui;
+  background: var(--bg);
+  color: var(--fg);
+  padding: var(--padding);
+}
+.dark {
+  --bg: #0b1220;
+  --fg: #dfefff;
+  --accent: #4ea8ff;
+}
+button {
+  background: var(--accent);
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: none;
+}

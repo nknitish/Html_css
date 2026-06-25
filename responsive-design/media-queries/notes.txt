@@ -1,0 +1,26 @@
+What it is:
+- Media queries apply CSS conditionally based on viewport features (width, resolution, orientation).
+
+Why it matters:
+- They enable responsive layouts and adaptivity across devices.
+
+Key properties / syntax:
+- @media (min-width: X) { ... } and queries combining features with and, or.
+
+Interview questions:
+1) Q: What is the difference between min-width and max-width queries?
+   A: min-width applies at and above the value (mobile-first); max-width applies at and below (desktop-first).
+2) Q: Can you query device orientation?
+   A: Yes: @media (orientation: portrait) { ... }
+3) Q: How to target high-resolution screens?
+   A: Use resolution or min-device-pixel-ratio queries.
+4) Q: How to combine queries?
+   A: Use and/or keywords: @media (min-width:600px) and (orientation:landscape) { }
+5) Q: Should you base breakpoints on devices?
+   A: Prefer content-based breakpoints.
+
+Common gotchas:
+- Using too many device-specific breakpoints causes maintenance burden.
+
+Pro tips:
+- Centralize breakpoints as variables (Sass/CSS custom properties) to keep consistent.

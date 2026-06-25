@@ -1,0 +1,16 @@
+Flexbox — Senior interview questions
+
+1) How to use flexbox for complex responsive components without breaking accessibility?
+- Answer: Combine flexbox for layout with semantic markup, ensure keyboard focus order follows DOM order, and avoid relying on visual ordering alone for critical flows.
+
+2) How to mix flex and grid in a design system?
+- Answer: Use grid for page/section-level 2D layout and flexbox inside components for axis-alignment; define clear responsibilities to avoid overlap.
+
+3) How to implement equal-height columns and responsive wrapping with flex?
+- Answer: Use align-items: stretch on the container and flex-wrap with proper flex-basis/min-width constraints.
+
+4) How to debug cross-browser flex differences?
+- Answer: Test in target browsers, use vendor-normalized patterns (avoid older flexbox shorthand bugs), and use feature detection polyfills if needed.
+
+5) How to build a responsive toolbar with flex that collapses gracefully?
+- Answer: Use flex-wrap, min-width on items, and move overflow items into an overflow menu when necessary.

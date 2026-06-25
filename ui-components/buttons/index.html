@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Buttons — Demo</title>
+    <style>
+      body {
+        font-family: system-ui;
+        padding: 16px;
+      }
+      .btn {
+        padding: 8px 12px;
+        border-radius: 6px;
+        border: 1px solid transparent;
+        cursor: pointer;
+      }
+      .primary {
+        background: #0366d6;
+        color: #fff;
+      }
+      .secondary {
+        background: #f3f4f6;
+        color: #111;
+        border-color: #ddd;
+      }
+      .ghost {
+        background: transparent;
+        border: 1px solid #0366d6;
+        color: #0366d6;
+      }
+      .icon {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .loading {
+        opacity: 0.7;
+        pointer-events: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Buttons</h1>
+    <button class="btn primary">Primary</button>
+    <button class="btn secondary">Secondary</button>
+    <button class="btn ghost">Ghost</button>
+    <button class="btn icon" id="iconBtn">🔍 Icon</button>
+    <button class="btn primary" id="loadBtn">Submit</button>
+
+    <script>
+      // Toggle loading state to simulate async action
+      document.getElementById("loadBtn").addEventListener("click", function () {
+        const b = this;
+        b.classList.add("loading");
+        b.textContent = "Loading...";
+        setTimeout(() => {
+          b.classList.remove("loading");
+          b.textContent = "Submit";
+        }, 1500);
+      });
+    </script>
+  </body>
+</html>

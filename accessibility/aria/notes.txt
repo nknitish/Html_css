@@ -1,0 +1,26 @@
+What it is:
+- ARIA provides roles, states, and properties to supplement semantics when native HTML is insufficient.
+
+Why it matters:
+- Enables accessible custom widgets but must be used carefully to avoid conflicts with native behavior.
+
+Key properties / syntax:
+- role, aria-label, aria-labelledby, aria-live, aria-hidden, aria-expanded, aria-controls
+
+Interview questions:
+1) Q: When should you use ARIA?
+   A: Only when native HTML cannot express required semantics.
+2) Q: What is aria-live?
+   A: Announces dynamic changes to assistive tech.
+3) Q: How to label complex widgets?
+   A: Use aria-labelledby or aria-label to provide accessible names.
+4) Q: How to hide content from AT?
+   A: Use aria-hidden="true" but ensure hidden content isn't needed by AT.
+5) Q: Why avoid role="button" on <div> if possible?
+   A: Native <button> provides built-in keyboard and accessibility behavior.
+
+Common gotchas:
+- Overusing ARIA can create conflicts and unexpected behavior.
+
+Pro tips:
+- Prefer semantic HTML; use ARIA patterns from WAI-ARIA Authoring Practices.

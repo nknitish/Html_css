@@ -1,0 +1,26 @@
+What it is:
+- Media covers images, picture element, video, audio, and iframes.
+
+Why it matters:
+- Proper media handling affects performance, accessibility (alt text, captions) and UX.
+
+Key properties / syntax:
+- <img src alt>, <picture><source srcset>, <video controls><source>, <track kind="captions">, loading="lazy"
+
+Interview questions:
+1) Q: When to use <picture>?
+   A: For art-direction or when serving different formats per viewport.
+2) Q: What is srcset for?
+   A: Provide resolution/size candidates for the browser to choose.
+3) Q: How to provide captions for video?
+   A: Use <track kind="captions">.
+4) Q: When to use loading="lazy"?
+   A: For offscreen images to improve initial load performance.
+5) Q: What is alt text for?
+   A: Describe image content for AT and in case image fails to load.
+
+Common gotchas:
+- Missing alt for informative images; not providing captions for video when needed.
+
+Pro tips:
+- Use modern formats (WebP/AVIF) with fallbacks; pre-generate responsive variants.

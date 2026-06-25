@@ -1,0 +1,16 @@
+Fluid Layouts — Senior interview questions
+
+1) How to design fluid layouts that don't break at extreme viewport sizes?
+- Answer: Use clamp(), min/max values, and sensible constraints (max-width, min-width) to prevent overflow and maintain legibility.
+
+2) How to test fluid layouts with dynamic content lengths (i18n)?
+- Answer: Test with long translations and varying image sizes, apply overflow strategies, and ensure UI doesn't rely on fixed widths.
+
+3) How to combine fluid layouts with CSS Grid and Flexbox?
+- Answer: Use Grid for macro layout with fluid track sizes and Flexbox for intra-component alignment; use minmax to create fluid tracks.
+
+4) How to debug visual regressions introduced by fluid sizing?
+- Answer: Use visual diffs at multiple viewport widths and isolate components with storybook-like environments.
+
+5) How to convert static pixel-based layouts to fluid ones incrementally?
+- Answer: Replace fixed widths with percentages or clamp values progressively and validate at critical breakpoints.

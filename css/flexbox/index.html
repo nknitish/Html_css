@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Flexbox — Demo</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Flexbox playground</h1>
+    <div class="controls">
+      <label
+        >Direction:
+        <select id="dir">
+          <option>row</option>
+          <option>column</option>
+        </select></label
+      >
+      <label
+        >Justify:
+        <select id="jc">
+          <option>flex-start</option>
+          <option>center</option>
+          <option>space-between</option>
+        </select></label
+      >
+      <label
+        >Align:
+        <select id="ai">
+          <option>stretch</option>
+          <option>center</option>
+          <option>flex-start</option>
+        </select></label
+      >
+    </div>
+    <div class="demo" id="container">
+      <div class="item">A</div>
+      <div class="item">B</div>
+      <div class="item">C</div>
+    </div>
+    <script>
+      const container = document.getElementById("container");
+      document
+        .getElementById("dir")
+        .addEventListener(
+          "change",
+          (e) => (container.style.flexDirection = e.target.value),
+        );
+      document
+        .getElementById("jc")
+        .addEventListener(
+          "change",
+          (e) => (container.style.justifyContent = e.target.value),
+        );
+      document
+        .getElementById("ai")
+        .addEventListener(
+          "change",
+          (e) => (container.style.alignItems = e.target.value),
+        );
+    </script>
+  </body>
+</html>

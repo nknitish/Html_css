@@ -1,0 +1,16 @@
+Semantic Elements — Senior interview questions
+
+1) How do semantic elements improve maintainability in large teams?
+- Answer: They document intent, help authors reason about layout, and reduce cognitive load when composing components or CMS templates.
+
+2) When might you avoid a semantic element and why?
+- Answer: When semantics don't match the content or for low-level layout primitives where role/aria would be misleading. Prefer simple containers with clear naming.
+
+3) How to migrate legacy markup heavy in <div> to semantic HTML without breaking styles?
+- Answer: Incrementally, add semantics with progressive refactors, map old classes to new elements, and ensure CSS targets both legacy and new selectors during migration.
+
+4) How do landmark roles interact with screen readers and SPA routing?
+- Answer: Use appropriate landmarks and update focus on route changes (move focus to main); ensure only one main and proper aria-live notifications as needed.
+
+5) How to design semantic components for reuse across a design system?
+- Answer: Encapsulate semantic markup, document expected child structure, and keep accessibility contracts explicit (e.g., required headings, labels).

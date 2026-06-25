@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Responsive Typography</title>
+    <style>
+      :root {
+        --base: 16px;
+      }
+      html {
+        font-size: var(--base);
+      }
+      @media (min-width: 800px) {
+        html {
+          font-size: 18px;
+        }
+      }
+      body {
+        font-family: system-ui;
+        padding: 16px;
+      }
+      h1 {
+        font-size: clamp(1.4rem, 1.2rem + 2vw, 2.2rem);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Responsive Typography</h1>
+    <p>Heading uses clamp() to scale between breakpoints.</p>
+  </body>
+</html>

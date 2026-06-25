@@ -1,0 +1,16 @@
+Fundamentals — Senior interview questions
+
+1) How do you reason about layout reflows and repaints, and how to minimize them?
+- Answer: Batch DOM updates, avoid layout-triggering properties in tight loops, use transforms/opacities for animations, and use will-change sparingly.
+
+2) How to design a global CSS reset and base styles for a component library?
+- Answer: Use a minimal reset (box-sizing, consistent base font), define tokens, and keep reset scoped to root to avoid interfering with third-party CSS.
+
+3) How do you use units (px/rem/em) effectively in a responsive system?
+- Answer: Use rem for global scalable sizes, em for component-relative sizing, and px for borders and hairline specifics when necessary.
+
+4) How to debug cascade/specificity issues in production?
+- Answer: Reproduce minimal test case, use browser devtools to inspect computed styles, and track stylesheet origins to refactor selectors.
+
+5) How to balance CSS performance vs maintainability?
+- Answer: Use modular styles, avoid deep selectors, keep critical styles minimal, and automate optimizations via build tools.

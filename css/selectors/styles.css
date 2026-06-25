@@ -1,0 +1,20 @@
+/* Descendant */
+.container p {
+  color: #222;
+}
+/* Child */
+.container > p {
+  margin: 8px 0;
+}
+/* Adjacent */
+p + p {
+  border-top: 1px dashed #ddd;
+}
+/* Attribute */
+p[data-state="active"] {
+  background: #eef;
+}
+/* Class */
+.special {
+  color: crimson;
+}

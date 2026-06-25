@@ -1,0 +1,16 @@
+UI Components — Senior interview questions
+
+1) How do you design a component API that balances flexibility and stability for product teams?
+- Answer: Define a minimal surface area of props (appearance, size, behavior), follow semantic defaults, and maintain backward compatibility via deprecation policies and feature flags.
+
+2) How to handle accessibility obligations in a shared component library?
+- Answer: Bake accessibility into components (labels, roles, keyboard support), provide documented accessibility contracts, and include testing in CI for ARIA and keyboard behaviors.
+
+3) How to manage style isolation and theming across many components?
+- Answer: Use CSS variables for theme tokens, scope component styles, and provide a theming guide and tokens for consumers.
+
+4) How to version components safely in a monorepo or package ecosystem?
+- Answer: Use semantic versioning, publish changelogs, and create codemods for breaking changes while keeping migration guides.
+
+5) How to test components for regressions and accessibility before releases?
+- Answer: Use snapshot tests, visual regression (Percy/Loki), unit tests for behavior, and automated axe checks plus manual a11y testing.

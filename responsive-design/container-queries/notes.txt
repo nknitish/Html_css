@@ -1,0 +1,26 @@
+What it is:
+- Container queries let elements adapt styles based on the size of their container rather than the viewport.
+
+Why it matters:
+- Enables component-level responsiveness and better reusability.
+
+Key properties / syntax:
+- container-type, @container (min-width: ... ) { ... }
+
+Interview questions:
+1) Q: How are container queries different from media queries?
+   A: They respond to container size, not viewport size.
+2) Q: What browser support considerations exist?
+   A: Modern browsers support container queries; check fallbacks for older browsers.
+3) Q: When to use container queries?
+   A: For componentized layouts where the container size determines presentation.
+4) Q: Can container queries improve design system components?
+   A: Yes — components can adapt when placed in different layouts.
+5) Q: How to enable container sizing?
+   A: Set container-type: size on the container element.
+
+Common gotchas:
+- Sparse support in older browsers; provide graceful fallbacks.
+
+Pro tips:
+- Combine container queries with CSS custom properties for flexible components.

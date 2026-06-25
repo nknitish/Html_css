@@ -1,0 +1,16 @@
+Selectors — Senior interview questions
+
+1) How do you approach writing selectors in a large codebase to avoid specificity wars?
+- Answer: Favor class-based selectors, adopt naming conventions (BEM), avoid deep nesting, and centralize utilities for overrides.
+
+2) How to debug cascade-related bugs introduced by third-party CSS?
+- Answer: Inspect computed styles, add scoped overrides with utility classes, and consider isolating third-party styles with iframe or CSS scope if necessary.
+
+3) What strategies reduce CSS bundle size related to selectors?
+- Answer: Remove unused selectors (purge), split code by route, and avoid long selector chains that bloat CSS.
+
+4) How to design selectors for component libraries to be consumable and override-friendly?
+- Answer: Use minimal, well-documented class APIs and expose modifier classes rather than relying on descendant selectors.
+
+5) How to handle browser-specific selector behavior or bugs?
+- Answer: Feature-detect where possible, provide targeted fallbacks in CSS with supports/@supports or conditional builds.

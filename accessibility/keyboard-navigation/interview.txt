@@ -1,0 +1,16 @@
+Keyboard Navigation — Senior interview questions
+
+1) How to implement a robust focus-trap for a modal that works across web frameworks?
+- Answer: Capture Tab and Shift+Tab, loop focus within the dialog, mark background inert or aria-hidden, and restore focus on close. Use tested utilities where available.
+
+2) How to design keyboard shortcuts without conflicting with browser/OS shortcuts?
+- Answer: Choose non-conflicting key combos, allow customization, and provide discoverability and an option to disable shortcuts.
+
+3) How to test keyboard accessibility in automated workflows?
+- Answer: Use end-to-end tests simulating keyboard navigation (Tab/Enter/Arrow) and assert expected focus locations and activations.
+
+4) How to handle complex keyboard interactions in components like menus and grids?
+- Answer: Follow WAI-ARIA practices for roving tabindex, arrow key handling, and use aria-activedescendant where appropriate.
+
+5) How to document keyboard interactions for product teams?
+- Answer: Provide clear accessibility contracts per component including allowed keys, focus behavior, and examples.

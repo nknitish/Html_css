@@ -1,0 +1,16 @@
+Grid — Senior interview questions
+
+1) When would you choose CSS Grid over Flexbox in a complex layout?
+- Answer: Choose Grid for two-dimensional layouts where both row and column control is needed (e.g., page shells), Flexbox for single-axis alignment.
+
+2) How to build a responsive grid that reflows differently at various widths?
+- Answer: Use repeat(auto-fit/auto-fill, minmax(...)) with grid-template-columns and media queries for breakpoint-specific changes.
+
+3) How to ensure grid areas are accessible and maintain source order?
+- Answer: Keep logical DOM order and use grid placement for visuals; ensure keyboard/tab order follows DOM or manage programmatically.
+
+4) How to migrate a float-based layout to Grid with minimal visual changes?
+- Answer: Map columns and rows to grid tracks, progressively replace containers, and maintain visual parity while reducing complexity.
+
+5) How to optimize large dynamic grids for performance?
+- Answer: Virtualize large lists, avoid heavy CSS selectors on many elements, and limit reflows by minimizing layout changes.

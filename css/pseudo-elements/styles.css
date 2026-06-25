@@ -1,0 +1,18 @@
+body {
+  font-family: system-ui;
+  padding: 16px;
+}
+.labelled::before {
+  content: "Note:";
+  font-weight: bold;
+  margin-right: 6px;
+  color: #666;
+}
+input::placeholder {
+  color: #999;
+  font-style: italic;
+}
+::selection {
+  background: #ffd;
+  color: #000;
+}

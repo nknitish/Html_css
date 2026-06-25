@@ -1,0 +1,13 @@
+/* Feedback components styles: modal, toast, tooltip, progress, skeleton */
+.modal{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.4);visibility:hidden}
+.modal.open{visibility:visible}
+.dialog{background:#fff;padding:16px;border-radius:8px;max-width:360px}
+.toast{position:fixed;right:16px;bottom:16px;background:#111;color:#fff;padding:10px;border-radius:6px;opacity:0;transform:translateY(12px);transition:all .2s}
+.toast.show{opacity:1;transform:none}
+.tooltip{position:relative;display:inline-block}
+.tooltip span{position:absolute;bottom:120%;left:50%;transform:translateX(-50%);background:#000;color:#fff;padding:6px;border-radius:4px;white-space:nowrap;display:none}
+.tooltip:hover span{display:block}
+.progress{width:100%;background:#eee;height:12px;border-radius:8px;overflow:hidden}
+.bar{height:100%;background:#36f;width:0%;transition:width .3s}
+.skeleton{background:linear-gradient(90deg,#eee,#f7f7f7,#eee);height:18px;border-radius:6px;animation:shimmer 1.2s infinite;background-size:200% 100%}
+@keyframes shimmer{from{background-position:-200px 0}to{background-position:200px 0}}
