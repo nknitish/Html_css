@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Image Example</title>
+
+    <style>
+      body {
+        font-family: system-ui, sans-serif;
+        margin: 16px;
+        color: #111;
+        line-height: 1.6;
+      }
+
+      main {
+        max-width: 760px;
+        margin: 0 auto;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 10px;
+        width: 100%;
+      }
+
+      .small-image img {
+        width: auto;
+      }
+
+      figure {
+        margin: 24px 0;
+      }
+
+      .side-by-side {
+        display: grid;
+        gap: 16px;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      }
+
+      figcaption {
+        margin-top: 8px;
+        font-size: 0.95rem;
+        color: #444;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>HTML Image Examples</h1>
+      <p>
+        Images can be loaded from an external source by using a full URL in the
+        <code>src</code> attribute.
+      </p>
+
+      <section>
+        <h2>External image source</h2>
+        <figure>
+          <img
+            src="https://www.w3schools.com/html/pic_trulli.jpg"
+            alt="Scenic trulli houses in Italy"
+          />
+          <figcaption>External image loaded from a URL.</figcaption>
+        </figure>
+      </section>
+
+      <section>
+        <h2>
+          Image with HTML width and height attributes GetOveride by inline CSS
+          of img
+        </h2>
+        <figure class="small-image">
+          <img
+            src="https://www.w3schools.com/html/img_chania.jpg"
+            alt="Boats in Chania Greece"
+            width="500"
+            height="333"
+          />
+          <figcaption>
+            HTML attributes set the image size, but CSS keeps it responsive.
+          </figcaption>
+        </figure>
+      </section>
+
+      <section>
+        <h2>CSS vs inline style</h2>
+        <p>
+          The examples below demonstrate an image sized with HTML attributes and
+          one sized with inline CSS.
+        </p>
+        <div class="side-by-side">
+          <figure>
+            <img
+              src="https://www.w3schools.com/html/html5.gif"
+              alt="HTML5 Icon"
+              width="128"
+              height="128"
+            />
+            <figcaption>HTML attributes: width and height.</figcaption>
+          </figure>
+          <figure>
+            <img
+              src="https://www.w3schools.com/html/html5.gif"
+              alt="HTML5 Icon"
+              style="width: 128px; height: 128px"
+            />
+            <figcaption>Inline CSS style sets width and height.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- Background Images -->
+
+      <section>
+        <div
+          style="
+            background-image: url(https://www.w3schools.com/html/html5.gif);
+            height: 100px;
+            width: 100px;
+          "
+        >
+          HelloI am on the image
+        </div>
+      </section>
+
+      <!-- Different Images at different screen size -->
+
+      <section>
+        <picture>
+          <source media="(min-width: 650px)" srcset="img_food.jpg" />
+          <source media="(min-width: 465px)" srcset="img_car.jpg" />
+          <img src="img_girl.jpg" />
+        </picture>
+      </section>
+    </main>
+  </body>
+</html>

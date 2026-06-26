@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="alert-btn" onclick="alert(`Hello World`)">Alert Btn</button>
+    <button id="click-btn">Click Me</button>
+
+    <script>
+      const alertBtn = document.getElementById("alert-btn");
+      const clickBtn = document.getElementById("click-btn");
+
+      //click from antoer button
+      clickBtn.addEventListener("click", () => {
+        alertBtn.click();
+        alertBtn.disabled = true;
+        alertBtn.innerText = "I am disabled";
+      });
+    </script>
+  </body>
+</html>

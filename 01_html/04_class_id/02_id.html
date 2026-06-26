@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+  <head>
+    <style>
+      #myHeader {
+        background-color: lightblue;
+        color: black;
+        padding: 40px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="myHeader">My Header</h1>
+    <button id="btn">Click me</button>
+  </body>
+
+  <script>
+    const btn = document.getElementById("btn");
+
+    btn.addEventListener("click", () => {
+      document.getElementById("myHeader").textContent = "Have a nice day!";
+      // Disable button
+      btn.disabled = true;
+      btn.textContent = "Disabled";
+    });
+  </script>
+</html>

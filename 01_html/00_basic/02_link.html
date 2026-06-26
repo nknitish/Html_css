@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Link</title>
+
+    <style>
+      a:link {
+        color: green;
+        background-color: transparent;
+        text-decoration: none;
+      }
+
+      a:visited {
+        color: pink;
+        background-color: transparent;
+        text-decoration: none;
+      }
+
+      a:hover {
+        color: red;
+        background-color: transparent;
+        text-decoration: underline;
+      }
+
+      a:active {
+        color: yellow;
+        background-color: transparent;
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Types of URLs -->
+
+    <h2>Absolute URLs</h2>
+    <p><a href="https://www.w3.org/" target="_blank">W3C</a></p>
+    <p><a href="https://www.google.com/" target="_blank">Google</a></p>
+
+    <h2>Relative URLs</h2>
+    <p><a href="html_images.asp">HTML Images</a></p>
+    <p><a href="/css/default.asp">CSS Tutorial</a></p>
+
+    <!-- The title attribute specifies extra information about an element. The information is most often shown as a tooltip text when the mouse moves over the element. -->
+    <a
+      href="https://www.w3schools.com/html/"
+      title="Go to W3Schools HTML section"
+      >Visit our HTML Tutorial</a
+    >
+  </body>
+</html>

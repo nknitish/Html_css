@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 10px;
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+  /* to remote extra border line  */
+  border-collapse: collapse;
+  padding: 0 4px;
+  border-style: dotted;
+}
+
+th {
+  background-color: lightskyblue;
+  text-align: left;
+}
+
+td {
+  text-align: left;
+}
+
+/* Styling Table */
+tr:nth-child(even) {
+  background-color: #d6eeee;
+}
