@@ -1,26 +1,32 @@
-What it is:
+### #What it is:
+
 - Pseudo-elements create virtual elements (before, after, placeholder, selection) to style parts of elements.
 
 Why it matters:
+
 - Useful to add decorative content and styling hooks without extra markup.
 
 Key properties / syntax:
+
 - ::before, ::after, ::placeholder, ::selection
 
 Interview questions:
-1) Q: How to add an icon before text without extra markup?
+
+1. Q: How to add an icon before text without extra markup?
    A: Use ::before with content property.
-2) Q: How to style placeholder text?
+2. Q: How to style placeholder text?
    A: Use ::placeholder.
-3) Q: How to change selection color?
+3. Q: How to change selection color?
    A: Use ::selection.
-4) Q: Can pseudo-elements be animated?
+4. Q: Can pseudo-elements be animated?
    A: Yes, they accept most CSS properties except content on transition.
-5) Q: Are pseudo-elements accessible?
+5. Q: Are pseudo-elements accessible?
    A: They are visual; don't put critical content solely in pseudo-elements.
 
 Common gotchas:
+
 - Relying on pseudo-elements for essential content breaks assistive tech.
 
 Pro tips:
+
 - Use pseudo-elements for small decorative patterns and accessible labeling with care.

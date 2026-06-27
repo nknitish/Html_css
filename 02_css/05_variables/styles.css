@@ -3,17 +3,21 @@
   --fg: #111;
   --accent: #0066ff;
   --padding: 12px;
+  --width: 600px;
 }
 body {
   font-family: system-ui;
   background: var(--bg);
   color: var(--fg);
   padding: var(--padding);
+  width: var(--width);
+  border: 2px solid black;
 }
 .dark {
   --bg: #0b1220;
   --fg: #dfefff;
   --accent: #4ea8ff;
+  --width: calc(600px - var(--padding));
 }
 button {
   background: var(--accent);
