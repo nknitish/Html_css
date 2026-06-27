@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Radio Button Demo</title>
+  </head>
+  <body>
+    <h2>Without Form</h2>
+
+    <p>Choose your favorite language:</p>
+
+    <input
+      type="radio"
+      id="html1"
+      name="language1"
+      value="HTML"
+      onchange="handleChange(event)"
+    />
+    <label for="html1">HTML</label>
+
+    <input
+      type="radio"
+      id="css1"
+      name="language1"
+      value="CSS"
+      onchange="handleChange(event)"
+    />
+    <label for="css1">CSS</label>
+
+    <input
+      type="radio"
+      id="js1"
+      name="language1"
+      value="JavaScript"
+      onchange="handleChange(event)"
+    />
+    <label for="js1">JavaScript</label>
+
+    <p>You have selected: <span id="selected_lang"></span></p>
+
+    <hr />
+
+    <h2>Using Form</h2>
+
+    <form id="myForm">
+      <p>Choose your favorite language:</p>
+
+      <input type="radio" id="html2" name="language2" value="HTML" />
+      <label for="html2">HTML</label>
+
+      <input type="radio" id="css2" name="language2" value="CSS" />
+      <label for="css2">CSS</label>
+
+      <input type="radio" id="js2" name="language2" value="JavaScript" />
+      <label for="js2">JavaScript</label>
+
+      <br /><br />
+
+      <button type="submit">Submit</button>
+
+      <p>You have selected: <span id="selected_lang2"></span></p>
+    </form>
+
+    <script>
+      // Without form
+      function handleChange(event) {
+        document.getElementById("selected_lang").innerText = event.target.value;
+      }
+
+      //Without form -> with all radio button
+
+      const allRadioButtons = document.querySelectorAll(
+        'input[name="language1"]',
+      );
+
+      allRadioButtons.forEach((radio) => {
+        radio.addEventListener("change", (event) => {
+          console.log(event.target.value);
+        });
+      });
+
+      // Using form
+      const myForm = document.getElementById("myForm");
+
+      myForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const selected = myForm.querySelector(
+          'input[name="language2"]:checked',
+        );
+
+        const placeholder = document.getElementById("selected_lang2");
+
+        if (!selected) {
+          placeholder.innerHTML =
+            "<span style='color:red'>Please select a language</span>";
+          return;
+        }
+
+        placeholder.innerText = selected.value;
+      });
+    </script>
+  </body>
+</html>

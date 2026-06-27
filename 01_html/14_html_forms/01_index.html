@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Demo</title>
+    <style>
+      input {
+        display: block;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="myForm">
+      <label for="name">Name</label>
+      <input type="text" id="name" />
+      <label for="password">Password</label>
+      <input required type="password" id="password" />
+      <button type="submit">Submit</button>
+    </form>
+
+    <script>
+      const myForm = document.getElementById("myForm");
+      myForm.addEventListener("submit", (event) => {
+        //Prevent defualt
+        event.preventDefault();
+
+        const name = document.getElementById("name").value;
+        const password = document.getElementById("password").value;
+        console.log(name, password);
+      });
+    </script>
+  </body>
+</html>

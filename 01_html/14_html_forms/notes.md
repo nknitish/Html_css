@@ -1,27 +1,37 @@
+querySelector() → Returns the first matching element.
+querySelectorAll() → Returns all matching elements (NodeList).
+getElementsByName() → Returns all elements with that name (NodeList-like NodeList/HTMLCollection depending on the API), whether they're checked or not.
+
 What it is:
+
 - HTML forms are interfaces for collecting user input using elements like input, select, textarea, and button.
 
 Why it matters:
+
 - Forms are the primary mechanism for user input (login, signup, payment) and require correct UX and validation.
 
 Key properties / syntax:
+
 - <form action="..." method="post">; input types: text, email, password, number, file; attributes: required, pattern, readonly, disabled
 
 Interview questions:
-1) Q: How to associate a label with an input?
+
+1. Q: How to associate a label with an input?
    A: Use <label for="id"> or wrap the input with <label>.
-2) Q: What does required do?
+2. Q: What does required do?
    A: Triggers native validation; doesn't replace server-side checks.
-3) Q: Disabled vs readonly?
+3. Q: Disabled vs readonly?
    A: Disabled removes control from tab order and isn't submitted; readonly is submitted but not editable.
-4) Q: How to implement accessible error messages?
+4. Q: How to implement accessible error messages?
    A: Use aria-describedby pointing to the message; set aria-invalid.
-5) Q: When use novalidate?
+5. Q: When use novalidate?
    A: When building custom validation UI and bypassing browser UI.
 
 Common gotchas:
+
 - Relying solely on client-side validation; forgetting to validate on the server.
 - Using placeholders instead of labels.
 
 Pro tips:
+
 - Use type="email" to get mobile keyboards and basic validation; use fieldsets to group related inputs.

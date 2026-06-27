@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=x, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Without Form</h2>
+
+    <p>Select Languages1:</p>
+
+    <label>
+      <input type="checkbox" name="languages1" value="HTML" />
+      HTML
+    </label>
+    <br />
+
+    <label>
+      <input type="checkbox" name="languages1" value="CSS" />
+      CSS
+    </label>
+    <br />
+
+    <label>
+      <input type="checkbox" name="languages1" value="JavaScript" />
+      JavaScript
+    </label>
+    <br />
+
+    <label>
+      <input type="checkbox" name="languages1" value="React" />
+      React
+    </label>
+    <br />
+
+    <h2>With Form</h2>
+
+    <form id="myForm">
+      <p>Select Languages 2:</p>
+
+      <label>
+        <input type="checkbox" name="language2" value="HTML" />
+        HTML
+      </label>
+      <br />
+
+      <label>
+        <input type="checkbox" name="language2" value="CSS" />
+        CSS
+      </label>
+      <br />
+
+      <label>
+        <input type="checkbox" name="language2" value="JavaScript" />
+        JavaScript
+      </label>
+      <br />
+
+      <label>
+        <input type="checkbox" name="language2" value="React" />
+        React
+      </label>
+
+      <br />
+      <button type="submit">submit</button>
+    </form>
+
+    <script>
+      //Without form
+
+      const checkBoxes = document.getElementsByName("languages1");
+
+      for (const checkbox of checkBoxes) {
+        checkbox.addEventListener("change", () => {
+          const selected = [];
+
+          for (const cb of checkBoxes) {
+            if (cb.checked) {
+              selected.push(cb.value);
+            }
+          }
+
+          console.log(selected);
+        });
+      }
+
+      //With form
+      const myForm = document.getElementById("myForm");
+
+      myForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        const checkBox = document.querySelectorAll(
+          'input[name="language2"]:checked',
+        );
+        const checked = Array.from(checkBox).map((cb) => cb.value);
+
+        console.log(checkBox, checked);
+
+        // Another way
+        const checkBox2 = document.getElementsByName("language2");
+
+        const selected = [];
+
+        for (const checkbox of checkBox2) {
+          if (checkbox.checked) {
+            selected.push(checkbox.value);
+          }
+        }
+
+        console.log(selected);
+      });
+    </script>
+  </body>
+</html>

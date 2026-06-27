@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <label for="message">message :</label>
+    <textarea id="message" rows="5" cols="30"></textarea>
+
+    <button id="btn">Get Value</button>
+
+    <script>
+      const textarea = document.getElementById("message");
+      const btn = document.getElementById("btn");
+
+      btn.addEventListener("click", () => {
+        console.log(textarea.value);
+      });
+    </script>
+  </body>
+</html>
