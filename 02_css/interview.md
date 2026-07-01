@@ -1,18 +1,27 @@
 https://developer.mozilla.org/en-US/docs/Learn_web_development/
 
+# specificity
+
+https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts#specificity
+
 Senior CSS interview questions (5-6 years)
 
-1) How do you design a scalable CSS architecture for a large web app?
+1. How do you design a scalable CSS architecture for a large web app?
+
 - Answer: Use component-based organization, naming conventions (BEM/ITCSS), CSS variables for tokens, and a build step to scope and optimize styles.
 
-2) How to troubleshoot and resolve specificity conflicts in a large codebase?
+2. How to troubleshoot and resolve specificity conflicts in a large codebase?
+
 - Answer: Audit selectors, avoid IDs for styling, use utility classes for overrides, and adopt a consistent pattern to reduce accidental specificity (e.g., limit nesting).
 
-3) How do you optimize critical CSS and reduce render-blocking styles?
+3. How do you optimize critical CSS and reduce render-blocking styles?
+
 - Answer: Extract critical inlined CSS for above-the-fold, defer non-critical bundles, and use code-splitting and plugin tools to automate extraction.
 
-4) How to design responsive layouts that are robust across browsers?
+4. How to design responsive layouts that are robust across browsers?
+
 - Answer: Prefer mobile-first, use flexbox/grid appropriately, define breakpoints by content, and test with cross-browser tooling and visual regression.
 
-5) How to implement theming with CSS variables and avoid FOUC on theme switch?
+5. How to implement theming with CSS variables and avoid FOUC on theme switch?
+
 - Answer: Define variables on :root, set persisted theme class early (server-rendered or inline script), and transition elegantly with prefers-reduced-motion.
